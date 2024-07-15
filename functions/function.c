@@ -1,6 +1,7 @@
 #include <stdio.h>
-int a = 10;
-int b = 20;
+int a, b;
+a = 10;
+b = 20;
 int main()
 {
   // func declare
