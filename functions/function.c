@@ -1,25 +1,47 @@
+/**
+ * functions :- a reusable block of code
+ *
+ * u can use anywhere in your program when it needs
+ *
+ * 1.function declaration
+ * 2. function invockation
+ * 3. function definition
+ *
+ *
+ */
+
 #include <stdio.h>
-int a, b;
-a = 10;
-b = 20;
 int main()
 {
-  // func declare
 
-  int charan(int, int);
+  int numbers[2];
 
-  // func call
-  charan(a, b);
-  printf("\n A value is.....%d", a);
-  printf("\n A value is.....%d", b);
+  // func declaration
+  void AddTwoNum(int[]); // return_type func_name inputs
+
+  for (int i = 0; i < 2; i++)
+  {
+
+    printf("Enter number-%d :- ", i + 1);
+    scanf("%d", &numbers[i]);
+  }
+
+  AddTwoNum(numbers);
 }
 
 // func definition
-int charan(int x, int y)
+
+void AddTwoNum(int numbers[])
 {
 
-  int temp;
-  temp = a;
-  a = b;
-  b = temp;
+  int sum = 0;
+  for (int i = 0; i < 2; i++)
+  {
+
+    // printf("\n  %d- %d", i + 1, numbers[i]);
+
+    sum = sum + numbers[i];
+  }
+
+  printf("sum of two numbers is....%d", sum);
 }
