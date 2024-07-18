@@ -1,47 +1,46 @@
-/**
- * functions :- a reusable block of code
+/**function:- means resuable block of code. u can use it anywhere in ur program where it needs
  *
- * u can use anywhere in your program when it needs
- *
- * 1.function declaration
- * 2. function invockation
+ * 1. function declaration(function prototype)
+ * 2. function invokation(func call)
  * 3. function definition
  *
+ * by passing parameters at the time of func call are called "Actual parameters"
+ * by receving parameters in the function definition part called "formal parameters"
  *
+ * u can declare any variable before the Main func() is called "global declaration"
+ *
+ * call by value :- we can't change the actual variable values in the function
+ * call be reference :- we can change the actula variable varlues in the funcion
  */
 
 #include <stdio.h>
+
 int main()
 {
 
-  int numbers[2];
+  // declaration
+  int a, b, c;
+  // intialization
+  a = b = c = 0;
 
   // func declaration
-  void AddTwoNum(int[]); // return_type func_name inputs
+  void addTwoNum(int, int); // return type func_name parameters
 
-  for (int i = 0; i < 2; i++)
-  {
+  printf("Enter your numbers :- ");
+  scanf("%d%d", &a, &b);
 
-    printf("Enter number-%d :- ", i + 1);
-    scanf("%d", &numbers[i]);
-  }
-
-  AddTwoNum(numbers);
+  addTwoNum(a, b); // actual parameters
 }
 
 // func definition
+void addTwoNum(int num1, int num2)
+{ // formal parameters
 
-void AddTwoNum(int numbers[])
-{
+  int num3;
 
-  int sum = 0;
-  for (int i = 0; i < 2; i++)
-  {
+  num3 = num1 + num2;
 
-    // printf("\n  %d- %d", i + 1, numbers[i]);
+  // return num3;
 
-    sum = sum + numbers[i];
-  }
-
-  printf("sum of two numbers is....%d", sum);
+  printf("sum of %d and %d = %d", num1, num2, num3);
 }
