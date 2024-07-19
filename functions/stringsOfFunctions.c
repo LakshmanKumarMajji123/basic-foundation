@@ -1,11 +1,11 @@
 #include <stdio.h>
-
+// global declaration
 int i, count = 0;
 int main()
 {
 
   // charcterarray declaration
-  char myName[] = "Majji Lakshman Kumar";
+  char myName[] = "Majji Lakshman Kumar is a FullStack Devloper";
 
   // func declaration
   void name(char myName[]); // take multiple inputs
